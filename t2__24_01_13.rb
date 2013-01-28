@@ -13,6 +13,9 @@ def longest_words(str)
 end
 
 #2
+def url_replacer(str)
+	str.gsub(/(http\:\/\/[^\/]+)(\/[^\/ ]+)*/, '\1')	
+end
 
 
 #3
@@ -28,5 +31,6 @@ def words_count(str)
 end
 
 p longest_words(incoming_data)
+p url_replacer(incoming_data)
 p num_count(incoming_data)
 p words_count(incoming_data)
