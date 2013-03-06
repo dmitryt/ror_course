@@ -13,7 +13,7 @@ enable :sessions
 
 before do
   unless (['/auth', '/help'].include?(request.path) || session[:user])
-  	return redirect '/auth'
+  	return redirect to('/auth')
   end
 end
 
@@ -60,4 +60,5 @@ post '/auth' do
 	end
 	session[:user] = params[:username]
 	Log.create({:ip => request.ip, :datetime => DateTime.now})
+	redirect '/'
 end
