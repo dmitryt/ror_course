@@ -13,7 +13,7 @@ enable :sessions
 
 before do
   unless (['/auth', '/help'].include?(request.path) || session[:user])
-  	return redirect to('/auth')
+  	return redirect '/auth'
   end
 end
 
