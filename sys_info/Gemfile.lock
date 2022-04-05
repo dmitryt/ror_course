@@ -16,7 +16,7 @@ GEM
       yajl-ruby
     rack (1.5.2)
     systemu (2.5.2)
-    yajl-ruby (1.1.0)
+    yajl-ruby (1.4.2)
 
 PLATFORMS
   ruby
